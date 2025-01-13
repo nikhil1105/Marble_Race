@@ -1,0 +1,301 @@
+html,
+body,
+#root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ivory;
+}
+
+.interface {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    font-family: "Bebas Neue", cursive;
+}
+
+.time {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    font-size: 6vh;
+    background: #00000033;
+    padding-top: 5px;
+    text-align: center;
+}
+
+
+.restart {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    font-size: 80px;
+    background: #00000033;
+    padding-top: 10px;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.controls {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+}
+
+.controls .raw {
+    display: flex;
+    justify-content: center;
+}
+
+.controls .key {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    border: 2px solid #ffffff;
+    background: #ffffff44;
+}
+
+.controls .key.large {
+    width: 144px;
+}
+
+.controls .key.active {
+    background: #ffffff99;
+}
+
+.resetLevelButton {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    color: #ffffff;
+    font-size: 6vh;
+    padding-top: 5px;
+    text-align: right;
+    pointer-events: auto;
+    cursor: pointer;
+
+}
+
+
+.restartButton {
+    position: absolute;
+    right: 20%;
+    top: 3%;
+    color: #ffffff;
+    font-size: 6vh;
+    padding-top: 5px;
+    text-align: right;
+    pointer-events: auto;
+    cursor: pointer;
+
+}
+
+.scoresButton {
+    position: absolute;
+    left: 5%;
+    top: 3%;
+    color: #ffffff;
+    font-size: 6vh;
+    padding-top: 5px;
+    text-align: right;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.ballPanel {
+    position: absolute;
+    left: 15%;
+    top: 3%;
+    color: #ffffff;
+    font-size: 6vh;
+    padding-top: 5px;
+    text-align: right;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.scoresBoard {
+    position: absolute;
+    top: 5%;
+    height: 90vh;
+    width: 90vw;
+    left: 5%;
+    color: #ffffff;
+    font-size: 5vh;
+    background: #000000cd;
+    padding-top: 5px;
+    text-align: center;
+    padding-top: 15px;
+    pointer-events: auto;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.eventNone {
+    pointer-events: none;
+}
+
+.scoreCloseButton {
+    margin-left: 20vw;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.scroller {
+    max-Height: 80vh;
+    overflow-y: auto;
+}
+
+.pr5px {
+    padding-right: 5px
+}
+
+.pr2px {
+    padding-right: 2px
+}
+
+.pl5px {
+    padding-left: 5px
+}
+
+.pl2px {
+    padding-left: 2px
+}
+
+.noScoreText {
+    font-size: 5vh;
+    padding-top: 20vh
+}
+
+.menuText {
+    font-size: 5vh;
+    padding-top: 2vh;
+    cursor: pointer;
+}
+
+.nonLaptopcontrols {
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+    width: 20%;
+    pointer-events: auto;
+
+}
+
+.nonLaptopJumpBtn {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #808080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    transition: transform 0.1s ease;
+    pointer-events: auto;
+    z-index: -1;
+
+}
+
+.playButton{
+    position: absolute;
+    left:30%;
+    top:40%;
+    pointer-events: auto;
+    cursor: pointer;
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
+    .nonLaptopJumpBtn {
+        right: 8%;
+
+    }
+
+    .nonLaptopcontrols {
+        right: 8%;
+    }
+
+    .playButton{
+        position: absolute;
+        left:40%;
+        top:40%;
+    }
+
+}
+
+/* Styles for Portrait Tablets */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) {
+    .nonLaptopJumpBtn {
+        right: 10%;
+        width: 160px;
+        height: 160px;
+    }
+
+    .nonLaptopcontrols {
+        right: 10%;
+    }
+    .scoresBoard {
+        font-size: 6vh;
+    }
+}
+
+/* Styles for Landscape Tablets */
+@media (min-width: 1024px) and (max-width: 1400px) and (orientation: landscape) {
+    .nonLaptopJumpBtn {
+        right: 0%;
+        width: 160px;
+        height: 160px;
+    }
+
+    .nonLaptopcontrols {
+        right: 0%;
+    }
+    .scoresBoard {
+        font-size: 6vh;
+    }
+}
+
+/* Styles for Desktop/Laptops */
+@media (min-width: 1401px) {
+    .noScoreText {
+        font-size: 15vh;
+    }
+
+    .menuText {
+        font-size: 10vh;
+        padding-top: 2vh;
+        cursor: pointer;
+    }
+
+    .scoreCloseButton {
+        margin-left: 60vw;
+    }
+
+    .scoresBoard {
+        font-size: 6vh;
+    }
+    .playButton{
+        position: absolute;
+        left:45%;
+        top:40%;
+    }
+}

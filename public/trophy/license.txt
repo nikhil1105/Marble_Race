@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stylized/Toon Trophy
+* source:	https://sketchfab.com/3d-models/stylizedtoon-trophy-565adad7ac89479e92cc2e104406ca4e
+* author:	AnymonUsSub (https://sketchfab.com/sebastienthapa20)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stylized/Toon Trophy" (https://sketchfab.com/3d-models/stylizedtoon-trophy-565adad7ac89479e92cc2e104406ca4e) by AnymonUsSub (https://sketchfab.com/sebastienthapa20) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
