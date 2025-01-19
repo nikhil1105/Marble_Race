@@ -65,7 +65,6 @@ function Player() {
     const [smoothCameraPosition] = useState(() => new THREE.Vector3(10, 10, 10))
     const [smoothcameraTarget] = useState(() => new THREE.Vector3())
     const jump = () => {
-
         const origin = body.current.translation()
         origin.y -= 0.36  //0.31
         const direction = { x: 0, y: -1, z: 0 }
@@ -93,6 +92,7 @@ function Player() {
     const deviceType = useGame(state => state.deviceType)
     const setWindowSize = useGame(state => state.setWindowSize)
     const windowSize = useGame(state => state.windowSize)
+    const play = useGame(state => state.play)
 
 
     useEffect(() => {
@@ -115,7 +115,7 @@ function Player() {
         )
 
         const unSubAnyKeys = subscribeKeys(() => {
-            start()
+                start()
         })
 
         return () => {
@@ -126,7 +126,9 @@ function Player() {
     }, [])    
 
     useFrame((state, delta) => {
-
+        if (!play) {
+            return;
+        }
         const newDeviceType = getDeviceType();
         if (newDeviceType !== deviceType) {
             setDeviceType(newDeviceType);

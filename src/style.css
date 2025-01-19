@@ -40,7 +40,7 @@ body,
     left: 0;
     width: 100%;
     color: #ffffff;
-    font-size: 80px;
+    font-size: 40px;
     background: #00000033;
     padding-top: 10px;
     pointer-events: auto;
@@ -215,13 +215,17 @@ body,
 
 }
 
-.playButton{
+.playButton {
     position: absolute;
-    left:30%;
-    top:40%;
+    left: 30%;
+    top: 40%;
     pointer-events: auto;
     cursor: pointer;
 
+}
+
+.svg{
+    height: 5vh;
 }
 
 @media (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
@@ -234,10 +238,10 @@ body,
         right: 8%;
     }
 
-    .playButton{
+    .playButton {
         position: absolute;
-        left:40%;
-        top:40%;
+        left: 40%;
+        top: 40%;
     }
 
 }
@@ -253,8 +257,13 @@ body,
     .nonLaptopcontrols {
         right: 10%;
     }
+
     .scoresBoard {
         font-size: 6vh;
+    }
+    
+    .restart {
+        font-size: 60px;
     }
 }
 
@@ -269,8 +278,13 @@ body,
     .nonLaptopcontrols {
         right: 0%;
     }
+
     .scoresBoard {
         font-size: 6vh;
+    }
+
+    .restart {
+        font-size: 60px;
     }
 }
 
@@ -293,9 +307,18 @@ body,
     .scoresBoard {
         font-size: 6vh;
     }
-    .playButton{
+
+    .playButton {
         position: absolute;
-        left:45%;
-        top:40%;
+        left: 45%;
+        top: 40%;
+    }
+
+    .restart {
+        font-size: 80px;
+    }
+
+    .svg{
+        height: auto;
     }
 }

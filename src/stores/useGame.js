@@ -27,14 +27,15 @@ const loadInitialState = () => {
     try {
         const savedState = localStorage.getItem(LOCAL_STORAGE_KEY);
         if (savedState) {
-            return {
+            const state = {
                 blocksCounts: 4,
                 scores: [],
                 currentBall: 0,
                 ...JSON.parse(savedState),
                 ...defaultDataForLocalStorage(),
-
-            };
+            }
+            state.blocksCounts = state.blocksCounts > 502 ? 502 : state.blocksCounts
+            return state;
         }
     } catch (error) {
         console.error("Error parsing localStorage data:", error);
@@ -51,7 +52,10 @@ const loadInitialState = () => {
 export default create(
     subscribeWithSelector((set, get) => ({
         ...loadInitialState(),
-
+        play: false,
+        setPlay:(play)=>{
+            set(() => ({ play }));
+        },
         setWindowSize: (windowSize) => {
             set(() => ({ windowSize }));
         },
@@ -73,7 +77,7 @@ export default create(
 
         start: () => {
             set((state) => {
-                if (state.phase === "ready") {
+                if (state.phase === "ready" && state.play) {
                     const newState = {
                         ...state, phase: "playing", startTime: Date.now(),
                     };
@@ -95,8 +99,9 @@ export default create(
                             1000
                         ).toFixed(2);
                         newBlocksCounts += 2
+                        newBlocksCounts = newBlocksCounts > 502 ? 502 : newBlocksCounts
                     }
-                    
+
                     const newState = {
                         ...state,
                         blocksCounts: newBlocksCounts,
